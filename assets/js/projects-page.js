@@ -52,15 +52,13 @@
     solo: { '4x5': 6, '1x1': 6, '3x2': 8, '16x9': 10 },
   };
 
-  const pad = (n) => String(n).padStart(2, '0');
   const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
   const num = (n) => +n.toFixed(2);
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const key = (c) => String(c || '').trim().toLowerCase();
 
-  // Numbers follow the catalogue order, so a project keeps its number under every filter.
   const items = data
-    .map((p, i) => ({ p, no: pad(i + 1), cover: p && p.images && p.images[0] }))
+    .map((p) => ({ p, cover: p && p.images && p.images[0] }))
     .filter((it) => it.p && it.p.slug && it.cover);
 
   const artFor = (img) => {
@@ -131,7 +129,7 @@
   };
 
   const card = (it, slot, n) => {
-    const { p, no, cover } = it;
+    const { p, cover } = it;
     const dm = GA.dims(cover, 'm');
     const crop = cropStyle(cover, slot.art);
     const span = slot.narrow ? slot.span * (5 / 6) : slot.span;
@@ -146,8 +144,7 @@
       + `<img src="${GA.src(cover, 'm')}"${srcset} width="${dm.w}" height="${dm.h}" alt="${esc(cover.alt || p.name)}" decoding="async"${n > 1 ? ' loading="lazy"' : ''}>`
       + '</div>'
       + '<div class="project-card__meta">'
-      + `<span class="label project-card__index">${no}</span>`
-      + `<h3 class="project-card__title">${esc(p.name)}</h3>`
+      + `<h2 class="project-card__title">${esc(p.name)}</h2>`
       + `<span class="label project-card__info">${esc(GA.meta(p))}</span>`
       + '</div></a>';
   };
@@ -163,17 +160,16 @@
   const indexHtml = (list) => {
     if (!list.length) return '';
     const rows = list.map((it, i) => {
-      const { p, no, cover } = it;
+      const { p, cover } = it;
       const crop = cropStyle(cover, Object.assign(artFor(cover), { r: '4x5' })).css; // the preview frame is 4:5
       return `<li><a class="pj-line" href="project.html?p=${encodeURIComponent(p.slug)}" data-preview="${GA.src(cover, 'm')}" data-crop="${crop}" data-reveal style="--d:${num(Math.min(i, 8) * 0.04)}s">`
-        + `<span class="label pj-line__no">${no}</span>`
         + `<span class="pj-line__name">${esc(p.name)}</span>`
         + `<span class="pj-line__loc">${esc(p.location || '—')}</span>`
         + `<span class="pj-line__cat">${esc(p.category)}</span>`
         + `<span class="pj-line__year num">${esc(p.year)}</span>`
         + '</a></li>';
     }).join('');
-    return '<div class="pj-index__head label" aria-hidden="true"><span>No.</span><span>Name</span><span>Location</span><span>Category</span><span>Year</span></div>'
+    return '<div class="pj-index__head label" aria-hidden="true"><span>Name</span><span>Location</span><span>Category</span><span>Year</span></div>'
       + `<ul class="pj-index__list">${rows}</ul>`;
   };
 
@@ -184,13 +180,7 @@
 
   const counts = { all: items.length };
   CATEGORIES.forEach((c) => { counts[key(c)] = items.filter((it) => it.p.category === c).length; });
-  filterBtns.forEach((b) => {
-    const n = counts[b.dataset.filter] || 0;
-    const c = b.querySelector('.pj-filter__count');
-    if (c) c.textContent = n;
-    b.hidden = n === 0;
-  });
-  document.querySelectorAll('[data-pj-total]').forEach((el) => { el.textContent = items.length; });
+  filterBtns.forEach((b) => { b.hidden = !counts[b.dataset.filter]; });
 
   const params = new URLSearchParams(window.location.search);
   let filter = key(params.get('c'));

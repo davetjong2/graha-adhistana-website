@@ -613,10 +613,10 @@ a.row-item:hover { padding-left: 14px; }
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
-.site-footer { background: var(--ink); color: var(--ivory); padding-top: clamp(96px, 12vw, 200px); overflow: hidden; }
+.site-footer { background: var(--ink); color: var(--ivory); padding-top: clamp(88px, 9vw, 150px); overflow: hidden; }
 .footer-cta { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--col-gap); align-items: end; padding-bottom: clamp(72px, 9vw, 140px); }
 .footer-cta__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end; }
-.footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px var(--col-gap); padding: 48px 0 56px; border-top: 1px solid var(--line-inv); }
+.footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px var(--col-gap); padding: 0 0 56px; }
 .footer-grid .label { color: var(--mute); display: block; margin-bottom: 16px; }
 .footer-grid li + li { margin-top: 8px; }
 .footer-grid a, .footer-grid p { font-family: var(--serif); font-size: 1.3rem; line-height: 1.35; }

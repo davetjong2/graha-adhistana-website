@@ -26,6 +26,7 @@ Then open http://127.0.0.1:4321/.
 
 - **Projects:** edit `assets/js/projects.js`. Each project has a name, category, location, year, scope, summary, story and images.
 - **Header / footer:** edit `_partials/header.html` or `_partials/footer.html`, then run `python3 tools/sync-partials.py`.
+- **After editing any CSS or JS:** run `python3 tools/stamp-assets.py` so browsers load the new files (it adds `?v=<hash>` to every link).
 - **Design system:** tokens and components are in `assets/css/style.css`; the rules are in `DESIGN.md`. Each page has its own `assets/css/<page>.css`.
 - **Images:** `assets/img/ig/` holds the full-size images (from Instagram); `assets/img/m/` holds 1100px copies for grids.
 

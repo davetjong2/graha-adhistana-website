@@ -10,8 +10,8 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "A residence set on still water. Two lantern-like wings frame a cascading water wall, their light doubled on the lake at blue hour.",
-  "story": "The house is drawn as a pair of pavilions held apart by a single wall of falling water. Deep overhangs shade every terrace by day; at dusk the whole composition turns to lantern light and settles into its own reflection.",
+  "summary": "",
+  "story": "",
   "images": [
    {
     "f": "01-DZpcQDjSgkV-1.jpg",
@@ -31,8 +31,8 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "A deep timber soffit floats above black fins and warm stone. A lattice canopy draws you up the stair to the entrance.",
-  "story": "Designed and built as one commission in Manhattan, PIK 2. The roof is a single floating plane of timber; beneath it, vertical fins filter the street and a stone stair rises under a lattice canopy to the front door.",
+  "summary": "",
+  "story": "",
   "images": [
    {
     "f": "00-DeUDSS1kj_y-1.jpg",
@@ -64,8 +64,8 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "Cream slabs curve around the corner like contour lines, opening every floor to the evening sky.",
-  "story": "Each level is a continuous ribbon of cream render, softened at the corners so the house reads as one flowing form. Terraced gardens step down to the street, and warm light pools under every curve.",
+  "summary": "",
+  "story": "",
   "images": [
    {
     "f": "07-DX185WpEp13-1.jpg",
@@ -97,8 +97,8 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "A timeless statement of elegance: a white facade, a navy mansard roof and arched windows held in perfect symmetry.",
-  "story": "Classical proportions, drawn with restraint. A central arched bay rises to a navy mansard roof, flanked by balconies in black iron, so the house reads calmly from the street at any hour.",
+  "summary": "A timeless statement of elegance.",
+  "story": "",
   "images": [
    {
     "f": "02-DZDKEcTyScP-1.jpg",
@@ -118,7 +118,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "French classical proportions for a contemporary family: a navy mansard roof, tall arched windows and a raised garden terrace.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -151,8 +151,8 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "A ribbon of white roof wraps the house between the palms; black marble and lit stone anchor it to the ground.",
-  "story": "A single sculpted roof slab gives H's House its silhouette. Below it, fluted screens, black marble and a planted terrace layer the facade, so the house feels private from the street and open from within.",
+  "summary": "",
+  "story": "",
   "images": [
    {
     "f": "15-DMjrisZStGu-1.jpg",
@@ -184,7 +184,7 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "Timber volumes wrapped in planting, so every floor meets a garden edge.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -211,8 +211,8 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Design & Build",
   "featured": true,
-  "summary": "A bold expression where sharp lines meet fluid curves: a curved timber roof, a pleated white screen and a sculpted figure wall.",
-  "story": "Strength and softness in one facade. The curved timber roof and pleated screen soften the street front, while the stone base and deep garage give the house its weight. Inside, the curves continue as light.",
+  "summary": "Sharp lines meet fluid curves.",
+  "story": "",
   "images": [
    {
     "f": "25-DFuVs-mzNap-2.jpg",
@@ -238,7 +238,7 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "Bold, sharp lines in stone and timber: layered roof planes that read as strength and serenity at every angle.",
+  "summary": "A statement of elegance in bold, sharp lines.",
   "story": "",
   "images": [
    {
@@ -271,8 +271,8 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Interior Design",
   "featured": true,
-  "summary": "Book-matched marble, a sculptural leaf chandelier and deep velvet: rooms composed for gathering.",
-  "story": "An interior built on a few noble materials used generously. Marble is book-matched floor to ceiling, a single sculptural chandelier carries the living and dining rooms, and the palette stays quiet so the stone can speak.",
+  "summary": "",
+  "story": "",
   "images": [
    {
     "f": "32-DDFU9dMS-hu-3.jpg",
@@ -304,7 +304,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Interior Design",
   "featured": false,
-  "summary": "Dark, sleek, refined. Crafted for subtle, timeless luxury.",
+  "summary": "Dark, sleek, refined.",
   "story": "",
   "images": [
    {
@@ -331,7 +331,7 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Interior Design",
   "featured": false,
-  "summary": "A home theatre and bar in one: a book-matched marble wall, a starlit ceiling and room for everyone.",
+  "summary": "Home theatre, bar and karaoke room.",
   "story": "",
   "images": [
    {
@@ -358,7 +358,7 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Interior Design",
   "featured": false,
-  "summary": "A private retreat within the house: a curved marble bar, a backlit bottle wall and a cinema in black leather.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -385,8 +385,8 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Architecture",
   "featured": true,
-  "summary": "A sweeping curved roofline over more than 10,000 m², described as the largest padel facility in Indonesia.",
-  "story": "Tailored for the finest experience. The streamlined roof creates a grand high ceiling over the courts; set beside a serene lake, the building draws in naturally cool air. Attached VIP lounges give every player a refined sense of comfort.",
+  "summary": "Over 10,000 m² beside a lake, with VIP lounges.",
+  "story": "",
   "images": [
    {
     "f": "12-DRl40TEEoLi-1.jpg",
@@ -416,8 +416,8 @@ window.GA_PROJECTS = [
     "Graha Adhistana"
    ]
   ],
-  "summary": "Built for Angkasa Architects: layered white terraces curving around every corner, executed on site with precision.",
-  "story": "When an architect needs a builder who can hold a demanding line, they call us. Future House is a study in continuous curves, and every slab edge and terrace was formed on site to the architect's drawings.",
+  "summary": "Built as general contractor for Angkasa Architects.",
+  "story": "",
   "images": [
    {
     "f": "13-DRl4enzEtC0-5.jpg",
@@ -466,7 +466,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "A serene haven by the water's edge: a floating roof slab and a lit stepping-stone path across the lawn.",
+  "summary": "A serene haven by the water’s edge.",
   "story": "",
   "images": [
    {
@@ -487,7 +487,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "A light-lined cantilever roof reaches out over the entrance, softened by hanging branches.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -508,7 +508,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "A narrow city house made monumental with a carved stone facade and a sculpture at its heart.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -529,7 +529,7 @@ window.GA_PROJECTS = [
   "year": 2025,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "A terracotta screen filters the tropical light and gives the street a warm, quiet face.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -550,7 +550,7 @@ window.GA_PROJECTS = [
   "year": 2026,
   "scope": "Design & Build",
   "featured": false,
-  "summary": "From drawing to structure: layered volumes on a corner plot, shown here in design and in concrete.",
+  "summary": "Design and structure.",
   "story": "",
   "images": [
    {
@@ -577,7 +577,7 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Architectural Design",
   "featured": false,
-  "summary": "Three curved white slabs float over a black marble wall, drawn in crisp daylight between the palms.",
+  "summary": "",
   "story": "",
   "images": [
    {
@@ -610,7 +610,7 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Architectural Design",
   "featured": false,
-  "summary": "An architectural symphony where form meets function: modern tropical design that joins luxury and nature.",
+  "summary": "Modern tropical design.",
   "story": "",
   "images": [
    {
@@ -643,7 +643,7 @@ window.GA_PROJECTS = [
   "year": 2024,
   "scope": "Interior Design",
   "featured": false,
-  "summary": "Interiors for a family residence in Katamaran Permai, calm in tone and rich in material.",
+  "summary": "",
   "story": "",
   "images": [
    {

@@ -1,6 +1,6 @@
 /* ==========================================================================
    Graha Adhistana — contact page
-   Intro + direct lines | enquiry form, a full-bleed pause, a quiet Visit band.
+   Intro + direct lines | enquiry form, then a full-bleed pause.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -9,16 +9,19 @@
 .contact-top__grid { row-gap: clamp(80px, 12vw, 128px); align-items: start; }
 .contact-intro, .contact-enquiry { grid-column: 1 / -1; min-width: 0; }
 .contact-enquiry { max-width: 46rem; }
-.contact-intro__title { margin-top: clamp(22px, 2.6vw, 40px); }
 .contact-intro__lead { margin-top: clamp(28px, 3vw, 44px); max-width: 21em; color: var(--ink-2); }
 
 /* Direct lines on hairlines: each row is one link, the whole row is the target */
 .contact-lines { margin-top: clamp(56px, 6.4vw, 104px); max-width: 38rem; border-top: 1px solid var(--line); }
 
 @media (min-width: 1024px) {
+  /* Side by side the page is one screen: a shorter run-in than the shared intro keeps the whole form above the fold */
+  .contact-top { padding-top: calc(var(--header-h) + clamp(48px, 5vw, 72px)); }
   .contact-intro { grid-column: 1 / span 6; align-self: stretch; display: flex; flex-direction: column; }
   .contact-enquiry { grid-column: 8 / span 5; max-width: none; }
-  /* The form runs longer than the intro: the direct lines settle at the foot of the column, level with it */
+  /* Optical: the h1's cap line meets the cap line of the first label */
+  .contact-intro__title { margin-top: -0.1em; }
+  /* The form runs longer than the intro: the direct lines settle at the foot of the column, level with the button */
   .contact-intro__lead { margin-bottom: clamp(56px, 6.4vw, 104px); }
   .contact-lines { margin-top: auto; }
 }
@@ -52,14 +55,6 @@
 /* --------------------------------------------------------------------------
    Enquiry form (field styles come from style.css)
    -------------------------------------------------------------------------- */
-.contact-enquiry [hidden] { display: none !important; }
-.contact-form__head {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: clamp(32px, 3.4vw, 52px);
-}
-.contact-form__key { color: var(--taupe); }
 .contact-enquiry .req { color: var(--bronze); }
 
 .contact-form__grid {
@@ -74,64 +69,33 @@
 }
 /* One line of error text keeps its reserved height, so nothing below shifts */
 .contact-form .field__error { line-height: 1.2; }
-.contact-form .unit { text-transform: none; letter-spacing: 0.02em; }
+/* Four lines are enough for a first message, and a shorter box keeps the form on one screen */
+.contact-form textarea { min-height: 128px; }
 /* An unchosen select reads like the input placeholders */
 .contact-form select:has(option[value=""]:checked) { color: var(--taupe); }
 .contact-form select option { color: var(--ink); }
-.contact-form input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
-.contact-form input[type="number"]::-webkit-inner-spin-button,
-.contact-form input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 /* Autofill paints its own tint, so an inset shadow keeps the field on paper.
    That shadow replaces style.css's box-shadow rings, so the focus and error rings are restated here. */
 .contact-form input:-webkit-autofill { -webkit-text-fill-color: var(--ink); -webkit-box-shadow: 0 0 0 60px var(--paper) inset; caret-color: var(--ink); }
 .contact-form input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0 60px var(--paper) inset, 0 0 0 1px var(--ink); }
 .contact-form .field.is-invalid input:-webkit-autofill { -webkit-box-shadow: 0 0 0 60px var(--paper) inset, 0 0 0 1px var(--field-error); }
 
-.contact-form__submit { margin-top: clamp(28px, 3vw, 44px); display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
-.contact-form__privacy { color: var(--taupe); }
-/* The solid button's text colour is ivory, so the default currentColor outline would vanish on the page */
-.contact-enquiry .btn--solid:focus-visible { outline-color: var(--c); }
+/* A flex container, so the button's box is the column's last edge with no line-box slack beneath it */
+.contact-form__submit { margin-top: clamp(28px, 3vw, 44px); display: flex; }
 @media (max-width: 599px) {
   .contact-form__submit .btn { width: 100%; }
 }
 
 /* Confirmation state */
 .contact-done:not([hidden]) { animation: contact-in 1.2s var(--ease-out) both; }
-.contact-done__title:focus { outline: none; }
-.contact-done__lead { margin-top: clamp(20px, 2vw, 30px); max-width: 20em; }
-.contact-done__note { margin-top: 12px; color: var(--taupe); }
+.contact-done__lead:focus { outline: none; }
 .contact-done__actions { margin-top: clamp(32px, 3.4vw, 52px); display: flex; flex-wrap: wrap; align-items: center; gap: 24px 44px; }
 /* Small text links get a 44px hit area without moving their underline */
-.contact-done__actions .link, .contact-visit .section-head__end { position: relative; }
-.contact-done__actions .link::after, .contact-visit .section-head__end::after { content: ""; position: absolute; inset: -13px -6px; }
+.contact-done__actions .link { position: relative; }
+.contact-done__actions .link::after { content: ""; position: absolute; inset: -13px -6px; }
 @keyframes contact-in {
   from { opacity: 0; transform: translate3d(0, 16px, 0); }
   to { opacity: 1; transform: none; }
 }
 
 /* Full-bleed pause: the shared .pano component in style.css */
-
-/* --------------------------------------------------------------------------
-   Visit band
-   -------------------------------------------------------------------------- */
-.contact-visit__grid { row-gap: clamp(40px, 6vw, 72px); align-items: end; }
-.contact-visit__text, .contact-map { grid-column: 1 / -1; min-width: 0; }
-@media (min-width: 900px) {
-  .contact-visit__text { grid-column: 1 / span 4; }
-  .contact-map { grid-column: 6 / span 7; }
-}
-.contact-visit__place { margin-top: clamp(20px, 2.4vw, 34px); font-style: normal; color: var(--ink-2); }
-
-/* Hairline frame with a narrow ivory margin; the map is drained of colour and warmed */
-.contact-map { padding: clamp(8px, 0.9vw, 14px); border: 1px solid var(--line); }
-.contact-map__frame { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--ivory); }
-.contact-map__frame iframe {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  border: 0;
-  filter: grayscale(1) sepia(0.22) contrast(0.92) brightness(1.02);
-  mix-blend-mode: multiply;
-}
-@media (max-width: 759px) {
-  .contact-map__frame { aspect-ratio: 1 / 1; }
-}

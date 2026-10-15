@@ -9,11 +9,9 @@
   if (!form) return;
 
   const done = $('enquiry-done');
-  const doneTitle = $('enquiry-done-title');
   const doneLead = $('enquiry-done-lead');
-  const doneNote = $('enquiry-done-note');
+  const thanks = doneLead.textContent;
   const again = $('enquiry-again');
-  const key = $('enquiry-key');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   form.noValidate = true; // our own messages sit next to each field instead of browser bubbles
@@ -34,14 +32,6 @@
     'f-email': (el) => {
       const v = el.value.trim();
       return !v || /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/.test(v) ? '' : 'Please check the email address.';
-    },
-    'f-plot': (el) => {
-      if (el.validity.badInput) return 'Please use numbers only.';
-      const v = el.value.trim();
-      if (!v) return '';
-      const n = Number(v);
-      if (n <= 0) return 'Please enter a size above zero.';
-      return n <= 1000000 ? '' : 'Please check the size.';
     },
   };
   const checked = Array.from(form.elements).filter((el) => rules[el.id]); // DOM order, so "first invalid" is the top one
@@ -94,15 +84,11 @@
     return s.value ? clean(s.options[s.selectedIndex].text) : '';
   };
   const compose = () => {
-    const plot = $('f-plot').value.trim();
     const rows = [
       ['Name', text('f-name')],
       ['WhatsApp', text('f-phone')],
       ['Email', text('f-email')],
       ['Project', choice('f-project')],
-      ['Location', text('f-location')],
-      ['Plot size', plot && plot + ' m²'],
-      ['Timeline', choice('f-timeline')],
     ].filter((r) => r[1]).map((r) => r[0] + ': ' + r[1]);
     const note = $('f-message').value
       .replace(/\r\n?/g, '\n')
@@ -115,12 +101,10 @@
   };
 
   const showDone = (opened) => {
-    doneLead.textContent = opened ? 'WhatsApp is opening with your message.' : 'WhatsApp did not open.';
-    doneNote.textContent = opened ? 'Press send there to reach us.' : 'Your browser may have blocked the new tab. Use the link below.';
+    doneLead.textContent = opened ? thanks : 'WhatsApp did not open.'; // a blocked tab leaves the link below as the way on
     form.hidden = true;
-    if (key) key.hidden = true;
     done.hidden = false;
-    doneTitle.focus({ preventScroll: true });
+    doneLead.focus({ preventScroll: true });
     bringIntoView(done);
   };
 
@@ -145,7 +129,6 @@
   $('enquiry-edit').addEventListener('click', () => {
     done.hidden = true;
     form.hidden = false;
-    if (key) key.hidden = false;
     const first = $('f-name');
     first.focus({ preventScroll: true });
     bringIntoView(first.closest('.field'));

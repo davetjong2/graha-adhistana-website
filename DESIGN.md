@@ -29,7 +29,17 @@ Static site, no build step: plain HTML + the shared CSS/JS below. Open it via th
 
 **Never invent:** awards, clients, testimonials, project counts, team names, email addresses, a street address, floor areas (except Noble Padel), prices or guarantees. If a section seems to need such a fact, design it around the facts above instead.
 
-## 2. Voice
+## 2. Reduction rules (client direction: "remove all AI slop, unnecessary text, information and sections")
+
+These override everything below.
+
+- **Images carry the site.** Words appear only where they carry a fact: names, places, years, scope, contact.
+- **Headings:** plain nouns or names ("Projects", "Services", "About", "Contact", "Interiors", "Earlier work", a project name). No slogans or taglines, no clever phrases, and no headings built as "phrase + *italic word*".
+- **No explanatory paragraphs.** At most ONE short sentence on a page where it states a fact (e.g. what the company does).
+- **Never use:** section index numbers (01, 02…), stats rows, process steps, FAQs, philosophy/values lists, "range"/"styles" recaps, collaborations recaps, maps, coordinates, "Drag"/"Scroll" hints, decorative captions repeating the alt text, or the same image twice on a page.
+- **Labels:** 1–2 words. Links: "All projects", "Enquire", project names.
+
+## 3. Voice
 
 - English. Quiet confidence: short sentences, concrete nouns, material and light. Use no exclamation marks, no "dream home", no "best-in-class" and no superlatives, except the Noble Padel claim credited to the facility.
 - Headlines run 2–7 words in sentence case, with at most ONE italic phrase using `<em>`. Examples: "Residences of *quiet* distinction", "Designed and built *as one*", "Every detail, *considered*".

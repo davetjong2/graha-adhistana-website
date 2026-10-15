@@ -222,6 +222,8 @@
       el.addEventListener('pointerleave', () => { pv.classList.remove('is-on'); running = false; });
     });
     bindPreview(document);
+    // Wheel scrolling moves rows under a still pointer without firing pointerleave
+    window.addEventListener('scroll', () => { if (running) { pv.classList.remove('is-on'); running = false; } }, { passive: true });
   }
 
   /* ---------- Drag to scroll for .h-scroll ---------- */
@@ -265,6 +267,10 @@
       slides[idx].classList.add('is-active');
       if (count) count.textContent = String(idx + 1).padStart(2, '0');
       if (caption) caption.textContent = slides[idx].dataset.caption || '';
+      const meta = $('[data-hero-meta]', hero);
+      const link = $('[data-hero-link]', hero);
+      if (meta) meta.textContent = slides[idx].dataset.meta || '';
+      if (link && slides[idx].dataset.href) link.setAttribute('href', slides[idx].dataset.href);
       runBar();
     };
     const schedule = () => { clearInterval(timer); if (playing) timer = setInterval(() => go(idx + 1), ms); };
