@@ -1,0 +1,5 @@
+.DS_Store
+# Working material: duplicates of assets/img/ig and regenerable previews
+_source/original/
+_source/thumbs/
+_source/contact.html
